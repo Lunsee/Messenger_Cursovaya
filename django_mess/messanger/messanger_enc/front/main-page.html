@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Личный Кабинет</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'mainPage.css' %}">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="{% static 'main-page.js' %}"></script>
+</head>
+<body>
+    {% csrf_token %}
+    <div id="mainBlock">
+        <div id="left-side">
+            <input type="text" placeholder="Find your friend" id="userSearch">
+            <input type="button" id="buttonForSearch" value="&#10004" onclick="userFind()">
+            <div id="userProfile" style="display: none; width: 75%; height: 350px; margin-left: 12.5%; margin-top: 100px; border: 2px solid black; border-radius: 10px;">
+                <p id="userProfileName" style="text-align: center; font-size: 25px; font-style: italic; margin-top: 15px; margin-bottom: 15px;">UserName</p>
+                <hr style="width: 100%; height: 2px; background: black; border: 0px; margin-top: 0px; margin-bottom: 0px;">
+                <div id="divForMessaging" style="border: 0px; width: 100%; height: 260px">
+                     <ul id="messageList" style="list-style-type: none; padding: 0;"></ul>
+                </div>
+                <hr style="width: 100%; height: 2px; background: black; border: 0px; margin-top: 0px; margin-bottom: 0px;">
+                <div>
+                    <input id="messageForUser" type="text" placeholder="Message your friend" style="width: 75%; height: 75%; border: none; margin-left: 10%; margin-top: 5px">
+                    <input id="sendMessageToUser" type="button" onclick="SendMessageController()" value="&#9998" style="margin-left: 17.5px; border-radius: 50px">
+                </div>
+            </div>
+        </div>
+        <div id="separator"></div>
+        <div id="right-side">
+            <img src="https://sc01.alicdn.com/kf/H7d24560d8f62479b9d73ba6db2172c937/240673227/H7d24560d8f62479b9d73ba6db2172c937.png" style="width: 35%; margin-left: 32.5%; margin-top: 75px; border: 2px solid black; border-radius: 200px">
+            <p id="userName" style="margin-top: 25px; margin-bottom: 25px"><script>showUsername()</script></p>
+            <hr style="width: 50%; margin-top: 0px; margin-bottom: 25px;">
+             <!--
+            <p id="userLastName">Ярошевич</p>
+            <p id="userFirstName">Иван</p>
+            -->
+            <input type="button" id="userExit" value="Выход" onclick="Exit()">
+        </div>
+    </div>
+</body>
+</html>

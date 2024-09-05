@@ -1,0 +1,154 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Niconne&display=swap');
+.text-header{
+    font-size: 1.5em; /* Уменьшаем размер шрифта */
+    margin-bottom: 60px; /* Добавляем отступ снизу */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    h2{
+         font-size: 1.5em; /* Уменьшаем размер шрифта */
+        margin-bottom: 10px; /* Добавляем отступ снизу */
+        font-weight: 400; /* Уменьшаем жирность текста */
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Добавляем тень */
+        color: #2b2929;
+    }
+}
+
+
+.login-bnt-div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+$p: hsl(213deg 85% 97%);
+$s: hsl(233deg 36% 38%);
+
+* {
+    font-family: 'Poppins';
+}
+
+@mixin screen {
+    background: $p;
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    border-radius: 30px;
+    box-shadow: 0 0 2em hsl(231deg 62% 94%);
+}
+
+body {
+    user-select: none;
+    overflow-y: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: hsl(218deg 50% 91%);
+    height: 100vh;
+}
+
+.screen-1 {
+
+    gap: 2em;
+    border-radius: 20px; /* Добавляем скругление краев */
+    background: rgba(225, 161, 161, 0.5);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Добавляем тень */
+    padding: 20px;
+    .username {
+        background: hsl(0deg 0% 100%);
+        /*box-shadow: 0 0 2em hsl(231deg 62% 94%);*/
+        box-shadow: 0 0 2em hsl(231deg 10% 77%);
+        padding: 1em;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5em;
+        border-radius: 20px;
+        color: hsl(0deg 0% 30%);
+        margin-top: -3em;
+        margin-bottom: 20px;
+        text-decoration: underline;
+        input {
+            outline: none;
+            border: none;
+            &::placeholder {
+                color: hsl(0deg 0% 0%);
+                font-size: 0.9em;
+            }
+        }
+    }
+    .password {
+        background: hsl(0deg 0% 100%);
+       /* box-shadow: 0 0 2em hsl(231deg 62% 94%);*/
+        box-shadow: 0 0 2em hsl(231deg 10% 77%);
+        padding: 1em;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5em;
+        border-radius: 20px;
+        color: hsl(0deg 0% 30%);
+        margin-bottom: 20px;
+        text-decoration: underline;
+        input {
+            outline: none;
+            border: none;
+            &::placeholder {
+                color: hsl(0deg 0% 0%);
+                font-size: 0.9em;
+            }
+        }
+        .show-hide {
+            margin-right: -5em;
+        }
+    }
+    .login {
+        padding: 1em;
+        background: hsl(353.7, 48.2%, 72.7%);
+        color: hsl(0 0 100);
+        border: none;
+        border-radius: 30px;
+        font-weight: 600;
+        width: 200px
+    }
+    .footer {
+        display: flex;
+        font-size: 0.7em;
+        color: hsl(0deg 0% 37%);
+        gap: 14em;
+        /*padding-bottom: 10em;*/
+        padding-bottom: 0em;
+        margin-top: 10px;
+        span {
+            cursor: pointer;
+        }
+        span:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+button {
+    cursor: pointer;
+}
+
+.login-bnt-div button {
+    padding: 10px 20px;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s; /* Длительность анимации */
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.login-bnt-div button:hover {
+    background-color: #3db0dd; /*  цвет кнопки при наведении */
+}
+.login-bnt-div button:active {
+    transform: translateY(5px); /* Смещение кнопки вниз при нажатии */
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register form</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="{% static 'scripts.js' %}"></script>
+</head>
+<body>
+    {% csrf_token %}
+
+    <div id= "login-form" class="screen-1">
+        <div class = "text-header">
+            <h2>Авторизация</h2>
+        </div>
+        <div id = "username" class="username">
+            <label for="username">Username:</label>
+            <div class="sec-2-username" id="sec-2-username">
+
+                <input id = "username-log" type="text" name="username" placeholder="Username..">
+            </div>
+        </div>
+        <div id="password" class ="password">
+            <label for="password">Password:</label>
+            <div class="sec-2-password" id="sec-2-password">
+                <input id ="password-log" class="pas" type="password" name="password" placeholder="············">
+            </div>
+        </div>
+        <div class = "login-bnt-div">
+            <button id = "sumbit-log-btn" class="login">Login</button>
+        </div>
+        <div class="footer">
+            <span id = "reg-btn">Register</span>
+            <span>Forgot Password?</span>
+        </div>
+    </div>
+
+
+    <!--
+
+    <div class="login-container">
+        <h2>Form</h2>
+        <div id = "reg_and_log-btns">
+            <button id="login-btn">Авторизоваться</button>
+            <button id="register-btn">Зарегистрироваться</button>
+        </div>
+        <div id="form-container"></div>
+    </div>
+-->
+</body>
+</html>

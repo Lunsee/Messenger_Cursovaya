@@ -1,0 +1,115 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    background: #2d3347;
+}
+
+#mainBlock {
+    display: flex;
+    width: 75%;
+    height: 85%;
+    margin-left: 12.5%;
+    background: white;
+    border-radius: 50px;
+    box-shadow: 0 0 36px 6px rgba(0, 191, 255, 1);
+}
+
+#left-side {
+    flex: 1;
+}
+
+#separator {
+    width: 1.25px;
+    margin-top: 12.5%;
+    height: 60%;
+    background:  rgba(0, 191, 255, 1);
+    box-shadow: 0 0 25px 5px rgba(0, 191, 255, 1);
+
+}
+
+#right-side {
+    flex: 1;
+}
+
+#userSearch {
+    margin-left: 32.5%;
+    margin-top: 25%;
+    text-align: center;
+    width: 25%;
+    height: 35px;
+    border-color: black;
+    border-radius: 50px;
+    outline: none;
+    background: white;
+    color: black;
+    font-size: 17.5px;
+    vertical-align: middle;
+}
+
+#userSearch::placeholder {
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 12.5px
+}
+
+#buttonForSearch {
+    margin-left: 15px;
+    width: 40px;
+    height: 40px;
+    margin-top: 25%;
+    border-radius: 50px;
+    vertical-align: middle;
+    background: white;
+    font-size: 17.5px;
+}
+
+#buttonForSearch:active {
+    background: black;
+    color: white;
+}
+
+#userName {
+    text-align: center;
+    font-size: 50px;
+}
+
+#userLastName {
+    font-size: 30px;
+    font-style: italic;
+    display: inline;
+    margin-left: 35%;
+}
+
+#userFirstName {
+    font-size: 30px;
+    font-style: italic;
+    display: inline;
+    margin-left: 1%;
+}
+
+#userExit {
+    width: 22.5%;
+    height: 35px;
+    margin-left: 38.75%;
+    border: 1.75px solid black;
+    border-radius: 50px;
+    margin-top: 75px;
+    color: black;
+    background: white;
+    box-shadow: 0 0 64px 6px rgba(0, 0, 0, 1);
+    font-size: 15px;
+    font-family: 'Verdana';
+    font-style: oblique;
+    font-weight: bold;
+
+}
+
+#userExit:hover {
+    color: white;
+    background: black;
+    box-shadow: 0 0 81px 9px rgba(0, 0, 0, 1);
+    transition: 0.4s;
+}
+
+
